@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Courses of "{{ localStorage.getItem('username')}}"</h1>
+  <div class="cards-container">
+    <mat-card *ngFor="let course of coursesOfUser" class="article-card">
+      <mat-card-title>{{course.name}}</mat-card-title>
+      <mat-card-content>
+        <img [src]="course.photoUrl" width="300" height="300">
+        <h3>Rating: {{course.rating}}</h3>
+        <h3>Topic: {{course.topic.name}}</h3>
+        <h3>Description: {{course.description}}</h3>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="goToCourse(course.id)">Know more</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+

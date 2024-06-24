@@ -1,0 +1,31 @@
+.example-card{
+  padding-left: 16%;
+  padding-right: 16%;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Course horizontally */
+  justify-content: center; /* Course vertically */
+  height: 60%; /* Adjust as needed */
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Course cards horizontally */
+  gap: 20px; /* Adjust spacing between cards */
+}
+
+.article-card {
+  max-width: 400px; /* Limit card width */
+}
+
+.comments {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Course cards horizontally */
+  gap: 20px; /* Adjust spacing between cards */
+  /*background-color: blue;*/
+  margin-top: 5%;
+}

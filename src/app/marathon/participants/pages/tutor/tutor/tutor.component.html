@@ -1,0 +1,158 @@
+<div>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>{{ profileData.personName }}</mat-card-title>
+        <mat-card-subtitle>{{ profileData.slogan }}</mat-card-subtitle>
+        <img mat-card-sm-image src="{{profileData.photoUrl}}"
+             alt="Image of a Shiba Inu">
+      </mat-card-title-group>
+
+    </mat-card-header>
+    <div style="display: flex; flex-direction: row; justify-content: space-evenly">
+      <div style="display: flex; flex-direction: column">
+        <p>Total de estudiantes</p>
+        <h2>{{profileData.nStudents}}</h2>
+      </div>
+      <div style="display: flex; flex-direction: column">
+        <p>Valoraciones</p>
+        <h2>{{profileData.nRatings}}</h2>
+      </div>
+    </div>
+
+
+    <mat-card-content style="margin: 10%">
+      <h2>Sobre mí</h2>
+      <br>
+      {{ profileData.aboutMe }}
+    </mat-card-content>
+    <p-button label="Edit" icon="pi pi-pencil" (click)="this.editProfileDialog = true" />
+  </mat-card>
+
+  <p-dialog header="Add your information" [modal]="true" [(visible)]="editProfileDialog"
+            [style]="{ width: '25rem', height: '20rem' }">
+
+    <span class="p-text-secondary block mb-5">Add your profile info.</span>
+
+    <div class="flex align-items-center gap-4 mb-4">
+      <label for="firstName" class="font-semibold w-6rem">Full Name</label>
+      <input [(ngModel)]="this.profileData.personName" pInputText id="firstName" class="flex-auto" autocomplete="off" />
+    </div>
+
+    <div class="flex align-items-center gap-4 mb-6">
+      <label for="profilePhotoUrl" class="font-semibold w-6rem">Photo URL</label>
+      <input [(ngModel)]="this.profileData.photoUrl" pInputText id="profilePhotoUrl" class="flex-auto" autocomplete="off" />
+    </div>
+
+    <div class="flex align-items-center gap-4 mb-4">
+      <label for="slogan" class="font-semibold w-6rem">Slogan</label>
+      <input [(ngModel)]="this.profileData.slogan" pInputText id="slogan" class="flex-auto" autocomplete="off" />
+    </div>
+
+    <div class="flex align-items-center gap-4 mb-6">
+      <label for="aboutMe" class="font-semibold w-6rem">About Me</label>
+      <input [(ngModel)]="this.profileData.aboutMe" pInputText id="aboutMe" class="flex-auto" autocomplete="off" />
+    </div>
+
+    <div class="flex justify-content-end gap-2">
+      <p-button label="Cancel" severity="secondary" (click)="editProfileDialog = false" />
+      <p-button label="Save" (click)="editProfileDialog = false; this.updateProfile()" />
+    </div>
+
+  </p-dialog>
+
+</div>
+
+
+<!--<div style="display: flex; flex-direction: column">
+  <h1 style="margin-top: 4%; align-self: center;">Comentarios y valoraciones</h1>
+  <div class="comments" style="margin-bottom: 10%">
+    <mat-card *ngFor="let courseComment of tutorComments" class="article-card">
+      <img mat-card-sm-image src="{{courseComment.user.photoUrl}}">
+      <mat-card-title>{{ courseComment.user.username }} | {{ courseComment.timeAgo }}</mat-card-title>
+      <mat-card-content>
+        &lt;!&ndash;<img [src]="course.photoUrl" width="300" height="300">&ndash;&gt;
+        <h3>Calificación: {{ courseComment.rating }}
+          <mat-icon style="margin-top: 15px">star</mat-icon>
+        </h3>
+        <h3>{{ courseComment.content }}</h3>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+</div>-->
+
+<mat-divider></mat-divider>
+
+<!--INSTRUCTOR COURSES SECTION-->
+<div class="container">
+  <h1>Courses of {{userData.username}}</h1>
+  <div class="cards-container">
+    <mat-card *ngFor="let course of instructorCourses" class="article-card" style="display: flex; justify-content: center">
+      <mat-card-title>{{course.name}}</mat-card-title>
+      <mat-card-content>
+        <img [src]="course.photoUrl" width="100" height="100">
+        <h3>Rating: {{course.rating}}</h3>
+        <h3>Topic: {{course.topicId}}</h3>
+        <h3>Description: {{course.description}}</h3>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="goToCourse(course.id)">Know more</button>
+      </mat-card-actions>
+    </mat-card>
+    <p-button label="New Course" rounded="true" icon="pi pi-plus" size="large"
+    (click)="this.newCourseDialog = true;"/>
+
+    <!--NEW COURSE DIALOG-->
+    <p-dialog header="Add new Course" [modal]="true" [(visible)]="newCourseDialog"
+              [style]="{ width: '25rem', height: '20rem' }">
+
+      <span class="p-text-secondary block mb-5">Add your information.</span>
+
+      <div class="flex align-items-center gap-4 mb-4">
+        <label for="name" class="font-semibold w-6rem">Name</label>
+        <input [(ngModel)]="this.course.name" pInputText id="name" class="flex-auto" autocomplete="off" />
+      </div>
+
+      <div class="flex align-items-center gap-4 mb-6">
+        <label for="photoUrl" class="font-semibold w-6rem">Photo Url</label>
+        <input [(ngModel)]="this.course.photoUrl" pInputText id="photoUrl" class="flex-auto" autocomplete="off" />
+      </div>
+
+      <div class="flex align-items-center gap-4 mb-6">
+        <label for="description" class="font-semibold w-6rem">Description</label>
+        <input [(ngModel)]="this.course.description" pInputText id="description" class="flex-auto" autocomplete="off" />
+      </div>
+
+      <div class="flex align-items-center gap-4 mb-6">
+        <label for="cost" class="font-semibold w-6rem">Cost</label>
+        <input [(ngModel)]="this.course.cost" pInputText id="cost" class="flex-auto" autocomplete="off" />
+        $
+      </div>
+
+      <div class="flex align-items-center gap-4 mb-6">
+        <label for="nHours" class="font-semibold w-6rem">Number of Hours</label>
+        <input [(ngModel)]="this.course.nHours" pInputText id="nHours" class="flex-auto" autocomplete="off" />
+        hrs
+      </div>
+
+      <div class="flex align-items-center gap-4 mb-6">
+        <label for="topicName" class="font-semibold w-6rem">Topic</label>
+        <input [(ngModel)]="this.course.topicName" pInputText id="topicName" class="flex-auto" autocomplete="off" />
+      </div>
+
+
+      <div class="flex justify-content-end gap-2">
+        <p-button label="Cancel" severity="secondary" (click)="newCourseDialog = false" />
+        <p-button label="Save" (click)="newCourseDialog = false; this.saveCourse()" />
+      </div>
+
+    </p-dialog>
+  </div>
+
+
+</div>

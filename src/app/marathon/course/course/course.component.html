@@ -1,0 +1,169 @@
+<div class="globalContainer">
+  <!-- NEW LESSON DIALOG-->
+  <p-dialog header="Add new Lesson" [modal]="true" [(visible)]="newLessonDialog"
+            [style]="{ width: '25rem', height: '20rem' }">
+
+    <span class="p-text-secondary block mb-5">Add your information.</span>
+
+    <div class="flex align-items-center gap-4 mb-4">
+      <label for="name" class="font-semibold w-6rem">Name</label>
+      <input [(ngModel)]="this.lesson.name" pInputText id="name" class="flex-auto" autocomplete="off" />
+    </div>
+
+    <div class="flex align-items-center gap-4 mb-6">
+      <label for="video" class="font-semibold w-6rem">Duration</label>
+      <input [(ngModel)]="this.lesson.duration" pInputText id="video" class="flex-auto" autocomplete="off" />
+      min
+    </div>
+
+    <div class="flex justify-content-end gap-2">
+      <p-button label="Cancel" severity="secondary" (click)="newLessonDialog = false" />
+      <p-button label="Save" (click)="newLessonDialog = false; this.saveLesson()" />
+    </div>
+
+  </p-dialog>
+
+  <div class="upContainer">
+    <div class="left">
+      <h1>{{ this.courseData.name }}</h1>
+      <h2>{{ this.courseData.description }}</h2>
+
+      <br>
+
+      <div class="ratingInfo">
+        <p style="margin-top: 8px">Calificación: {{ this.courseData.rating }}</p>
+        <mat-icon style="margin-top: 5px">star</mat-icon>
+        <p style="margin-top: 7px">({{ courseData.nRatings }} ratings)</p>
+        <p style="margin-top: 9px">{{ this.courseData.nStudents }} students</p>
+      </div>
+
+      <br>
+
+      <div class="author">
+        Created by:
+        <button mat-button (click)="goToTutorPage(courseData.instructorId) ">
+          {{ courseTutorUsername }}
+        </button>
+      </div>
+    </div>
+
+    <div class="right" style="margin-left: 15%">
+      <mat-card class="article-card" style="display: flex; align-items: center">
+        <img [src]="courseData.photoUrl" width="200" height="200">
+        <mat-card-actions style="display: flex; flex-direction: column">
+          <h2>Cost: ${{ this.courseData.cost }}</h2>
+          <p-button label="Buy" />
+          <p>Garantía de reembolso de 30 días</p>
+        </mat-card-actions>
+        <mat-card-content style="align-self: start; padding-top: 5%">
+          <p>This course includes:</p>
+          <mat-list role="list">
+            <mat-list-item role="listitem">
+              <mat-icon>play_circle</mat-icon>
+              {{ this.courseData.nHours }} horas de vídeo bajo demanda
+            </mat-list-item>
+            <mat-list-item role="listitem">
+              <mat-icon>all_inclusive</mat-icon>
+              Acceso de por vida
+            </mat-list-item>
+            <mat-list-item role="listitem">
+              <mat-icon>emoji_events</mat-icon>
+              Certificado de finalización
+            </mat-list-item>
+          </mat-list>
+        </mat-card-content>
+
+      </mat-card>
+    </div>
+  </div>
+
+
+  <div class="downContainer">
+    <h2>Contenido del curso</h2>
+
+    <mat-accordion>
+
+      <mat-expansion-panel *ngFor="let section of sections"
+                           (opened)="getSectionLessons(section.id)"
+                           (closed)="panelOpenState = false">
+
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{ section.name }}
+          </mat-panel-title>
+          <mat-panel-description>
+            {{ section.nLessons }} Clases | {{ section.time }}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <div *ngFor="let lesson of sectionLessons"
+             style="display: flex; flex-direction: row; justify-content: space-between">
+          <button  mat-button (click)="getLessonVideo(lesson.name) ">
+            {{ lesson.name }}
+          </button>
+          <p>{{ lesson.duration }} min </p>
+        </div>
+        <div style="display: flex; flex-direction: row; justify-content: space-between">
+          <p-button (click)="this.newLessonDialog = true;" label="+ Lesson" />
+        </div>
+
+
+      </mat-expansion-panel>
+
+    </mat-accordion>
+
+    <!-- NEW SECTION DIALOG-->
+
+    <p-dialog header="Add new Section" [modal]="true" [(visible)]="newSectionDialog"
+              [style]="{ width: '25rem', height: '20rem' }">
+
+      <div class="flex align-items-center gap-4 mb-4">
+        <label for="sectionName" class="font-semibold w-6rem">Name</label>
+        <input [(ngModel)]="this.section.name" pInputText id="sectionName" class="flex-auto" autocomplete="off" />
+      </div>
+
+      <div class="flex align-items-center gap-4 mb-6">
+        <label for="nLessons" class="font-semibold w-6rem">Number of lessons</label>
+        <input [(ngModel)]="this.section.nLessons" pInputText id="nLessons" class="flex-auto" autocomplete="off" />
+      </div>
+
+      <div class="flex align-items-center gap-4 mb-6">
+        <label for="time" class="font-semibold w-6rem">Time</label>
+        <input [(ngModel)]="this.section.time" pInputText id="time" class="flex-auto" autocomplete="off" />
+      </div>
+
+      <div class="flex justify-content-end gap-2">
+        <p-button label="Cancel" severity="secondary" (click)="newSectionDialog = false" />
+        <p-button label="Save" (click)="newSectionDialog = false; this.saveSection()" />
+      </div>
+
+    </p-dialog>
+
+    <p-button icon="pi pi-plus" [rounded]="true" (click)=" this.newSectionDialog = true;"/>
+
+    <h3 style="margin-top: 10%">Comentarios y valoraciones</h3>
+    <mat-divider></mat-divider>
+
+    <div class="comments">
+      <mat-card *ngFor="let courseComment of courseComments" class="article-card">
+        <img mat-card-sm-image src="{{courseComment.profilePhotoUrl}}">
+        <mat-card-title>{{ courseComment.username }} | Hace {{ courseComment.timeAgo }}</mat-card-title>
+        <mat-card-content>
+          <!--<img [src]="course.photoUrl" width="300" height="300">-->
+          <h3>Calificación: {{ courseComment.rating }}
+            <mat-icon style="margin-top: 15px">star</mat-icon>
+          </h3>
+          <h3>{{ courseComment.content }}</h3>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+
+    </div>
+
+  </div>
+
+
+</div>
