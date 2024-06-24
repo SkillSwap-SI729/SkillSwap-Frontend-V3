@@ -1,0 +1,531 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "DevSchooler",
+      "photoUrl": "https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2022-06/cantante-blessd-0d4d85.jpg",
+      "ranking": "5",
+      "numberCourses": "3",
+      "slogan": "Pasion por la enseñanza!",
+      "nStudents": 1000,
+      "nRatings": 500,
+      "aboutMe": "En Global Mentoring  hemos llegado a más de medio millón de alumnos (550,000) inscritos a nuestros cursos en Udemy.\n\nTenemos más de 20 años de experiencia capacitando profesionales en varias tecnologías y cumplimos 14 años enseñando de manera Online.\n\nSomos apasionados y especialistas en varias tecnología, como son Python, Java, JavaScript, Angular, Spring Framework, Excel, Lógica de Programación, Lenguaje C, C++, C#, etc.\n\nBuscamos ser un aliado de los profesionistas y empresas que requieran servicios de capacitación especializada en lenguajes como Python, Java, Spring, JavaScript, Angular, Lenguaje C, C++, C#, etc, en particular en el área de Desarrollo de Sistemas Web y Empresariales ya que son los más utilizados a nivel laboral. \n\nAyudamos a nuestros alumnos enseñandoles las herramientas necesarias del mercado laboral, y al mismo tiempo, brindar la guía que permita un crecimiento profesional y continuo en la tecnología que decidan estudiar con nosotros. "
+    },
+    {
+      "id": 2,
+      "username": "NiceTutor",
+      "photoUrl": "https://www.cultura.gal/sites/default/files/images/evento/ryan_castro_5.jpg",
+      "ranking": "3",
+      "numberCourses": "2",
+      "slogan": "Pasion por la enseñanza!",
+      "nStudents": 1000,
+      "nRatings": 500,
+      "aboutMe": "En Global Mentoring  hemos llegado a más de medio millón de alumnos (550,000) inscritos a nuestros cursos en Udemy.\n\nTenemos más de 20 años de experiencia capacitando profesionales en varias tecnologías y cumplimos 14 años enseñando de manera Online.\n\nSomos apasionados y especialistas en varias tecnología, como son Python, Java, JavaScript, Angular, Spring Framework, Excel, Lógica de Programación, Lenguaje C, C++, C#, etc.\n\nBuscamos ser un aliado de los profesionistas y empresas que requieran servicios de capacitación especializada en lenguajes como Python, Java, Spring, JavaScript, Angular, Lenguaje C, C++, C#, etc, en particular en el área de Desarrollo de Sistemas Web y Empresariales ya que son los más utilizados a nivel laboral. \n\nAyudamos a nuestros alumnos enseñandoles las herramientas necesarias del mercado laboral, y al mismo tiempo, brindar la guía que permita un crecimiento profesional y continuo en la tecnología que decidan estudiar con nosotros. "
+    },
+    {
+      "id": 3,
+      "username": "SeamLess",
+      "photoUrl": "https://yt3.googleusercontent.com/CChVj3hD3FnluZPcdseDkuj8F04Nt3A2rO55SWHiU5F0WgyjkkVtPJ5Ay-uNpaQ_-WxBORA5cQ=s900-c-k-c0x00ffffff-no-rj",
+      "ranking": "4",
+      "numberCourses": "2",
+      "slogan": "Pasion por la enseñanza!",
+      "nStudents": 1000,
+      "nRatings": 500,
+      "aboutMe": "En Global Mentoring  hemos llegado a más de medio millón de alumnos (550,000) inscritos a nuestros cursos en Udemy.\n\nTenemos más de 20 años de experiencia capacitando profesionales en varias tecnologías y cumplimos 14 años enseñando de manera Online.\n\nSomos apasionados y especialistas en varias tecnología, como son Python, Java, JavaScript, Angular, Spring Framework, Excel, Lógica de Programación, Lenguaje C, C++, C#, etc.\n\nBuscamos ser un aliado de los profesionistas y empresas que requieran servicios de capacitación especializada en lenguajes como Python, Java, Spring, JavaScript, Angular, Lenguaje C, C++, C#, etc, en particular en el área de Desarrollo de Sistemas Web y Empresariales ya que son los más utilizados a nivel laboral. \n\nAyudamos a nuestros alumnos enseñandoles las herramientas necesarias del mercado laboral, y al mismo tiempo, brindar la guía que permita un crecimiento profesional y continuo en la tecnología que decidan estudiar con nosotros. "
+    },
+    {
+      "id": 4,
+      "username": "Ing. Ubaldo Acosta",
+      "photoUrl": "https://img-c.udemycdn.com/user/200_H/1435594_908e_12.jpg",
+      "ranking": "5",
+      "numberCourses": "9",
+      "slogan": "Pasion por la enseñanza!",
+      "nStudents": 1000,
+      "nRatings": 500,
+      "aboutMe": "En Global Mentoring  hemos llegado a más de medio millón de alumnos (550,000) inscritos a nuestros cursos en Udemy.\n\nTenemos más de 20 años de experiencia capacitando profesionales en varias tecnologías y cumplimos 14 años enseñando de manera Online.\n\nSomos apasionados y especialistas en varias tecnología, como son Python, Java, JavaScript, Angular, Spring Framework, Excel, Lógica de Programación, Lenguaje C, C++, C#, etc.\n\nBuscamos ser un aliado de los profesionistas y empresas que requieran servicios de capacitación especializada en lenguajes como Python, Java, Spring, JavaScript, Angular, Lenguaje C, C++, C#, etc, en particular en el área de Desarrollo de Sistemas Web y Empresariales ya que son los más utilizados a nivel laboral. \n\nAyudamos a nuestros alumnos enseñandoles las herramientas necesarias del mercado laboral, y al mismo tiempo, brindar la guía que permita un crecimiento profesional y continuo en la tecnología que decidan estudiar con nosotros. "
+    },
+    {
+      "id": 5,
+      "username": "JuanIngenio",
+      "photoUrl": "https://img.freepik.com/foto-gratis/chico-guapo-seguro-posando-contra-pared-blanca_176420-32936.jpg",
+      "ranking": "5",
+      "numberCourses": "3",
+      "slogan": "Pasion por la enseñanza!",
+      "nStudents": 1000,
+      "nRatings": 500,
+      "aboutMe": "En Global Mentoring  hemos llegado a más de medio millón de alumnos (550,000) inscritos a nuestros cursos en Udemy.\n\nTenemos más de 20 años de experiencia capacitando profesionales en varias tecnologías y cumplimos 14 años enseñando de manera Online.\n\nSomos apasionados y especialistas en varias tecnología, como son Python, Java, JavaScript, Angular, Spring Framework, Excel, Lógica de Programación, Lenguaje C, C++, C#, etc.\n\nBuscamos ser un aliado de los profesionistas y empresas que requieran servicios de capacitación especializada en lenguajes como Python, Java, Spring, JavaScript, Angular, Lenguaje C, C++, C#, etc, en particular en el área de Desarrollo de Sistemas Web y Empresariales ya que son los más utilizados a nivel laboral. \n\nAyudamos a nuestros alumnos enseñandoles las herramientas necesarias del mercado laboral, y al mismo tiempo, brindar la guía que permita un crecimiento profesional y continuo en la tecnología que decidan estudiar con nosotros. "
+    },
+    {
+      "id": 6,
+      "username": "PepeBarca",
+      "photoUrl": "https://concepto.de/wp-content/uploads/2018/08/persona-e1533759204552.jpg",
+      "ranking": "5",
+      "numberCourses": "3",
+      "slogan": "Pasion por la enseñanza!",
+      "nStudents": 1000,
+      "nRatings": 500,
+      "aboutMe": "En Global Mentoring  hemos llegado a más de medio millón de alumnos (550,000) inscritos a nuestros cursos en Udemy.\n\nTenemos más de 20 años de experiencia capacitando profesionales en varias tecnologías y cumplimos 14 años enseñando de manera Online.\n\nSomos apasionados y especialistas en varias tecnología, como son Python, Java, JavaScript, Angular, Spring Framework, Excel, Lógica de Programación, Lenguaje C, C++, C#, etc.\n\nBuscamos ser un aliado de los profesionistas y empresas que requieran servicios de capacitación especializada en lenguajes como Python, Java, Spring, JavaScript, Angular, Lenguaje C, C++, C#, etc, en particular en el área de Desarrollo de Sistemas Web y Empresariales ya que son los más utilizados a nivel laboral. \n\nAyudamos a nuestros alumnos enseñandoles las herramientas necesarias del mercado laboral, y al mismo tiempo, brindar la guía que permita un crecimiento profesional y continuo en la tecnología que decidan estudiar con nosotros. "
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "name": "Introducción a la programación I",
+      "photoUrl": "https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/computer-coding.jpg",
+      "description": "Una pequeña introducción al mundo de la programación",
+      "topic": "Programación",
+      "topicId": 1,
+      "cost": 45.99,
+      "rating": 2,
+      "nRatings": 300,
+      "nStudents": 500,
+      "nHours": 13,
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "name": "Mecánica Automotriz I",
+      "photoUrl": "https://www.erso.com.mx/storage/app/uploads/public/647/7e8/23e/6477e823e8f3c499657821.jpg",
+      "description": "Una pequeña introducción al mundo de la mecánica automotriz",
+      "topic": "Mecánica Automotriz",
+      "topicId": 3,
+      "cost": 50.99,
+      "rating": 3,
+      "nRatings": 300,
+      "nStudents": 500,
+      "nHours": 13,
+      "userId": 1
+    },
+    {
+      "id": 3,
+      "name": "Teoría Musical",
+      "photoUrl": "https://escuelamusicalonline.com/wp-content/uploads/cat-teoria-musical-web.jpg",
+      "description": "Una introducción al mundo de la teoría musical",
+      "topic": "Música",
+      "topicId": 2,
+      "cost": 23.99,
+      "rating": 1,
+      "nRatings": 300,
+      "nStudents": 500,
+      "nHours": 13,
+      "userId": 1
+    },
+    {
+      "id": 4,
+      "name": "Ciencias Políticas",
+      "photoUrl": "https://cmsudi.udelistmo.edu/sites/default/files/2022-07/que-es-ciencia-politica.png",
+      "description": "Una pequeña introducción al mundo de las ciencias políticas",
+      "topic": "Ciencias Políticas",
+      "topicId": 4,
+      "cost": 20.99,
+      "rating": 2,
+      "nRatings": 300,
+      "nStudents": 500,
+      "nHours": 13,
+      "userId": 2
+    },
+    {
+      "id": 5,
+      "name": "Macroeconomía",
+      "photoUrl": "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-es-la-economa-mundial.png",
+      "description": "Una pequeña introducción al mundo de la macroeconomía",
+      "topic": "Economía",
+      "topicId": 5,
+      "cost": 30.99,
+      "rating": 3,
+      "nRatings": 300,
+      "nStudents": 500,
+      "nHours": 13,
+      "userId": 2
+    },
+    {
+      "id": 6,
+      "name": "Bolsa de valores",
+      "photoUrl": "https://res.cloudinary.com/hapi/image/upload/v1645652106/Web/blog/posts/comoFuncionaLaBolsa/inversionista_analizando_acciones_en_la_bolsa_de_valores_desde_celular.jpg",
+      "description": "Una pequeña introducción al mundo de la bolsa de valores",
+      "topic": "Finanzas",
+      "topicId": 6,
+      "cost": 12.00,
+      "rating": 4,
+      "nRatings": 300,
+      "nStudents": 500,
+      "nHours": 13,
+      "userId": 3
+    },
+    {
+      "id": 7,
+      "name": "Derecho coporativo",
+      "photoUrl": "https://blog.lemontech.com/wp-content/uploads/2022/08/derecho-corporativo-peru.jpg",
+      "description": "Una pequeña introducción al mundo del derecho corporativo",
+      "topic": "Derecho",
+      "topicId": 7,
+      "cost": 15.99,
+      "rating": 5,
+      "nRatings": 300,
+      "nStudents": 500,
+      "nHours": 13,
+      "userId": 3
+    }
+  ],
+  "sections": [
+    {
+      "id": 1,
+      "name": "Introduccion y A Comenzar",
+      "lessons": 1,
+      "time": "2 min",
+      "courseId": 1
+    },
+    {
+      "id": 2,
+      "name": "Introduccion a la Lógica de Programación",
+      "lessons": 3,
+      "time": "2h y 4 min",
+      "courseId": 1
+    },
+    {
+      "id": 3,
+      "name": "Variables y Tipos de datos",
+      "lessons": 3,
+      "time": "3h y 25 min",
+      "courseId": 1
+    },
+
+    {
+      "id": 4,
+      "name": "Bienvenida",
+      "lessons": 1,
+      "time": "2 min",
+      "courseId": 4
+    },
+    {
+      "id": 5,
+      "name": "Generalidades",
+      "lessons": 2,
+      "time": "2h y 4 min",
+      "courseId": 4
+    },
+    {
+      "id": 6,
+      "name": "Contenido",
+      "lessons": 3,
+      "time": "3h y 25 min",
+      "courseId": 4
+    },
+
+    {
+      "id": 7,
+      "name": "Introduccion a los mercados financieros",
+      "lessons": 2,
+      "time": "2 min",
+      "courseId": 6
+    },
+    {
+      "id": 8,
+      "name": "Tipos de instrumentos de inversion",
+      "lessons": 3,
+      "time": "2h y 4 min",
+      "courseId": 6
+    },
+    {
+      "id": 9,
+      "name": "Estrategias de inversion",
+      "lessons": 2,
+      "time": "3h y 25 min",
+      "courseId": 6
+    }
+  ],
+  "lessons":[
+    {
+      "id": 1,
+      "name": "Instalación de PSeint",
+      "duration": "05:22",
+      "sectionId": 2
+    },
+    {
+      "id": 2,
+      "name": "Ejercicio Hola Mundo con PSeint",
+      "duration": "04:08",
+      "sectionId": 2
+    },
+    {
+      "id": 3,
+      "name": "Ejecución Paso a Paso con PSeInt",
+      "duration": "05:41",
+      "sectionId": 2
+    },
+    {
+      "id": 4,
+      "name": "Imprimir variables en PSeInt",
+      "duration": "03:11",
+      "sectionId": 3
+    },
+    {
+      "id": 5,
+      "name": "Más detalles al trabajar con Variables",
+      "duration": "06:37",
+      "sectionId": 3
+    },
+    {
+      "id": 6,
+      "name": "Introducir Datos desde la Consola",
+      "duration": "06:35",
+      "sectionId": 3
+    },
+    {
+      "id": 7,
+      "name": "Introduccion y bienvenida",
+      "duration": "02:22",
+      "sectionId": 1
+    },
+    {
+      "id": 8,
+      "name": "Introduccion",
+      "duration": "00:46",
+      "sectionId": 4
+    },
+    {
+      "id": 9,
+      "name": "Que es el Marketing Politico",
+      "duration": "01:04",
+      "sectionId": 5
+    },
+    {
+      "id": 10,
+      "name": "Historia del Marketing Político",
+      "duration": "02:40",
+      "sectionId": 5
+    },
+    {
+      "id": 11,
+      "name": "Importancia y objetivos",
+      "duration": "02:41",
+      "sectionId": 6
+    },
+
+
+    {
+      "id": 12,
+      "name": "Mejora tu Experiencia de Aprendizaje",
+      "duration": "06:35",
+      "sectionId": 7
+    },
+    {
+      "id": 13,
+      "name": "Ejemplo de Tasa de Rendimiento Anualizada\n",
+      "duration": "02:22",
+      "sectionId": 7
+    },
+    {
+      "id": 14,
+      "name": "Diversificando Dentro de la Cartera de Acciones\n",
+      "duration": "00:46",
+      "sectionId": 8
+    },
+    {
+      "id": 15,
+      "name": "Diversificando el Portafolio: Tamaño de Capitalización\n",
+      "duration": "01:04",
+      "sectionId": 8
+    },
+    {
+      "id": 16,
+      "name": "Extremos del Espectro: Comprar y Mantener vs. Trading",
+      "duration": "02:40",
+      "sectionId": 9
+    },
+    {
+      "id": 17,
+      "name": "Estrategia de Inversión en Acciones de Crecimiento",
+      "duration": "02:41",
+      "sectionId": 9
+    }
+  ],
+  "courseComments": [
+    {
+      "id": 1,
+      "content": "Muy bueno el curso, aprendido y entendido muchas cosas y conforme avanzo en el curso me motiva aun mas a conocer las aplicaciones y usos del lenguaje",
+      "timeAgo": "Hace 3 semanas",
+      "rating": 5,
+      "courseId": 1,
+      "userId": 4
+    },
+    {
+      "id": 2,
+      "content": "Excelente curso, muy completo, realmente me sorprendió la cantidad de contenido que tiene el curso, aprendí muchísimo!",
+      "timeAgo": "Hace 2 meses",
+      "courseId": 1,
+      "rating": 5,
+      "userId": 5
+    },
+    {
+      "id": 3,
+      "content": "Como tal, está bien. Pero diría que faltan muchos más ejercicios propuestos, esa era la dinámica interesante.",
+      "timeAgo": "Hace 3 meses",
+      "courseId": 1,
+      "rating": 4,
+      "userId": 6
+    },
+    {
+      "id": 4,
+      "content": "Como tal, está bien. Pero diría que faltan muchos más ejercicios propuestos, esa era la dinámica interesante.",
+      "timeAgo": "Hace 3 meses",
+      "courseId": 1,
+      "rating": 5,
+      "userId": 3
+    },
+    {
+      "id": 5,
+      "content": "Muy bueno el curso, aprendido y entendido muchas cosas y conforme avanzo en el curso me motiva aun mas a conocer las aplicaciones y usos del lenguaje",
+      "timeAgo": "Hace 3 semanas",
+      "rating": 5,
+      "courseId": 4,
+      "userId": 4
+    },
+    {
+      "id": 6,
+      "content": "Excelente curso, muy completo, realmente me sorprendió la cantidad de contenido que tiene el curso, aprendí muchísimo!",
+      "timeAgo": "Hace 2 meses",
+      "courseId": 4,
+      "rating": 5,
+      "userId": 5
+    },
+    {
+      "id": 7,
+      "content": "Como tal, está bien. Pero diría que faltan muchos más ejercicios propuestos, esa era la dinámica interesante.",
+      "timeAgo": "Hace 3 meses",
+      "courseId": 4,
+      "rating": 4,
+      "userId": 6
+    },
+    {
+      "id": 8,
+      "content": "Como tal, está bien. Pero diría que faltan muchos más ejercicios propuestos, esa era la dinámica interesante.",
+      "timeAgo": "Hace 3 meses",
+      "courseId": 4,
+      "rating": 5,
+      "userId": 3
+    },
+    {
+      "id": 9,
+      "content": "Muy bueno el curso, aprendido y entendido muchas cosas y conforme avanzo en el curso me motiva aun mas a conocer las aplicaciones y usos del lenguaje",
+      "timeAgo": "Hace 3 semanas",
+      "rating": 5,
+      "courseId": 6,
+      "userId": 4
+    },
+    {
+      "id": 10,
+      "content": "Excelente curso, muy completo, realmente me sorprendió la cantidad de contenido que tiene el curso, aprendí muchísimo!",
+      "timeAgo": "Hace 2 meses",
+      "courseId": 6,
+      "rating": 5,
+      "userId": 5
+    },
+    {
+      "id": 11,
+      "content": "Como tal, está bien. Pero diría que faltan muchos más ejercicios propuestos, esa era la dinámica interesante.",
+      "timeAgo": "Hace 3 meses",
+      "courseId": 6,
+      "rating": 4,
+      "userId": 6
+    },
+    {
+      "id": 12,
+      "content": "Como tal, está bien. Pero diría que faltan muchos más ejercicios propuestos, esa era la dinámica interesante.",
+      "timeAgo": "Hace 3 meses",
+      "courseId": 6,
+      "rating": 5,
+      "userId": 1
+    }
+  ],
+  "userComments": [
+    {
+      "id": 1,
+      "content": "Muy buen tutor, responde a las dudas se sus alumos y se preocupa por su aprendizaje",
+      "timeAgo": "Hace 3 semanas",
+      "rating": 5,
+      "tutorId": 1,
+      "userId": 2
+    },
+    {
+      "id": 2,
+      "content": "Excelente isntructor, siempre me saca de apuros",
+      "timeAgo": "Hace 3 semanas",
+      "rating": 5,
+      "tutorId": 1,
+      "userId": 4
+    },
+    {
+      "id": 3,
+      "content": "No encuentro palabras de agradecimiento de haber encontrado a este maravilloso tutor",
+      "timeAgo": "Hace 3 semanas",
+      "rating": 5,
+      "tutorId": 2,
+      "userId": 5
+    },
+    {
+      "id": 4,
+      "content": "El mejor tutor que he tenido en mi vida!",
+      "timeAgo": "Hace 3 semanas",
+      "rating": 5,
+      "tutorId": 2,
+      "userId": 6
+    },
+
+
+    {
+      "id": 5,
+      "content": "Mas o menos, si ayuda pero los ejercicios que pone son muy simples.",
+      "timeAgo": "Hace 3 semanas",
+      "rating": 5,
+      "tutorId": 3,
+      "userId": 1
+    },
+    {
+      "id": 6,
+      "content": "Gracias a dios que encontre a este intructor maravilloso que me premite aprender de manera integra",
+      "timeAgo": "Hace 3 semanas",
+      "rating": 5,
+      "tutorId": 3,
+      "userId": 2
+    },
+    {
+      "id": 7,
+      "content": "Se preocupa pir mi aprendizaje plena y máximo",
+      "timeAgo": "Hace 3 semanas",
+      "rating": 5,
+      "tutorId": 3,
+      "userId": 4
+    }
+  ],
+  "topics": [
+    {
+      "id": 1,
+      "name": "Programación"
+    },
+    {
+      "id": 2,
+      "name": "Música"
+    },
+    {
+      "id": 3,
+      "name": "Mecánica Automotriz"
+    },
+    {
+      "id": 4,
+      "name": "Ciencias Políticas"
+    },
+    {
+      "id": 5,
+      "name": "Economía"
+    },
+    {
+      "id": 6,
+      "name": "Finanzas"
+    },
+    {
+      "id": 7,
+      "name": "Derecho"
+    }
+  ]
+}

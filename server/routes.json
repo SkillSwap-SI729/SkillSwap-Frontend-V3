@@ -1,0 +1,9 @@
+{
+  "/api/v1/*" : "/$1",
+  "/users/:userId/courses": "/courses?userId=:userId&_expand=user&_expand=topic",
+  "/courses/:courseId/sections": "/sections?courseId=:courseId&_expand=course",
+  "/courses/:courseId/courseComments": "/courseComments?courseId=:courseId&_expand=user",
+  "/sections/:sectionId/lessons": "/lessons?sectionId=:sectionId&_expand=section",
+  "/users/:tutorId/commentsReceived": "/userComments?tutorId=:tutorId&_expand=user",
+  "/topics/:topicId/courses": "/courses?topicId=:topicId&_expand=topic"
+}

@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+  <h1>SkillSwap</h1>
+  <img src="https://i.ibb.co/MgRVV4H/LOGO.jpg" width="58" height="32" style="margin-left: 1%">
+  <div class="mat-spacer"></div>
+  <button color="primary" mat-fab extended [routerLink]="'/home'">
+    <mat-icon>home</mat-icon>
+    Home
+  </button>
+  <button color="primary" mat-fab extended [routerLink]="'/users'">
+    <mat-icon>support_agent</mat-icon>
+    Tutors
+  </button>
+
+</mat-toolbar>
+<router-outlet></router-outlet>
