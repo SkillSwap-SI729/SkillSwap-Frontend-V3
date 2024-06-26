@@ -19,6 +19,9 @@ import {toInteger, toNumber} from "lodash";
   styleUrl: './course.component.css'
 })
 export class CourseComponent implements OnInit, AfterViewInit {
+  userRoles: any;
+  currentSessionInstructorId: any;
+  userLoggedId: any;
   lesson: any;
   section: any;
   currentSectionId: any;
@@ -50,6 +53,7 @@ export class CourseComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.getCourseData()
+    this.getSessionData()
   }
 
 
@@ -104,8 +108,31 @@ export class CourseComponent implements OnInit, AfterViewInit {
   }
 
   goToTutorPage(instructorId: number): void {
+    localStorage.setItem("goingToProfileMode", "otherProfile");
     localStorage.setItem('instructorId', instructorId.toString());
+    console.log(localStorage.getItem("instructorId"))
     this.router.navigateByUrl('/user').then()
   }
 
+  getSessionData(){
+    this.userLoggedId = localStorage.getItem('userId2');
+    this.userRoles = localStorage.getItem('userRoles')
+
+    if(this.userLoggedId){
+
+      if(this.userRoles.includes("ROLE_INSTRUCTOR")){
+        this.profileService.getByUserId(this.userLoggedId).subscribe((profile: any) => {
+          this.instructorService.getByProfileId(profile.id).subscribe((instructor: any) => {
+            this.currentSessionInstructorId = instructor.id ;
+
+
+          })
+        })
+      }
+
+    }
+  }
+
+  protected readonly localStorage = localStorage;
+  protected readonly toNumber = toNumber;
 }

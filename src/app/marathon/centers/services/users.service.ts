@@ -7,7 +7,7 @@ import {User} from "../../participants/model/user";
 @Injectable({
   providedIn: 'root'
 })
-export class UsersService extends BaseService<User>{
+export class UsersService extends BaseService<any>{
 
   constructor(http: HttpClient) {
     super(http);

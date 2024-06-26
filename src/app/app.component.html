@@ -6,9 +6,18 @@
     <mat-icon>home</mat-icon>
     Home
   </button>
-  <button color="primary" mat-fab extended [routerLink]="'/users'">
-    <mat-icon>support_agent</mat-icon>
-    Tutors
+  <button *ngIf="localStorage.getItem('userId2') != null" color="primary" mat-fab extended
+          (click)="goToMyProfilePage()">
+    <mat-icon>person</mat-icon>
+    My profile
+  </button>
+  <button *ngIf="localStorage.getItem('userId2') != null" color="primary" mat-fab extended (click)="logOut()">
+    <mat-icon>logout</mat-icon>
+    Log out
+  </button>
+  <button *ngIf="localStorage.getItem('userId2') == null"  color="primary" mat-fab extended [routerLink]="'/sign-in'">
+    <mat-icon>login</mat-icon>
+     Log in
   </button>
 
 </mat-toolbar>

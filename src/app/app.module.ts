@@ -44,7 +44,10 @@ import {
 } from "@angular/material/expansion";
 import {MatList, MatListItem} from "@angular/material/list";
 import {InputTextModule} from "primeng/inputtext";
+import { RadioButtonModule } from 'primeng/radiobutton';
 import {TutorComponent} from "./marathon/participants/pages/tutor/tutor/tutor.component";
+import {SignInComponent} from "./public/sign-in/sign-in.component";
+import {SignUpComponent} from "./public/sign-up/sign-up.component";
 
 @NgModule({
   declarations: [
@@ -53,9 +56,13 @@ import {TutorComponent} from "./marathon/participants/pages/tutor/tutor/tutor.co
     TutorsComponent,
     CoursesComponent,
     CourseComponent,
-    TutorComponent
+    TutorComponent,
+    SignInComponent,
+    SignUpComponent
+
   ],
   imports: [
+    RadioButtonModule,
     BrowserModule,
     BrowserAnimationsModule,
     DialogModule,

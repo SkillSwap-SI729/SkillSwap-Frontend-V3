@@ -5,6 +5,8 @@ import {TutorsComponent} from "./marathon/participants/pages/participants/tutors
 import {CoursesComponent} from "./marathon/centers/pages/courses/courses.component";
 import {CourseComponent} from "./marathon/course/course/course.component";
 import {TutorComponent} from "./marathon/participants/pages/tutor/tutor/tutor.component";
+import {SignInComponent} from "./public/sign-in/sign-in.component";
+import {SignUpComponent} from "./public/sign-up/sign-up.component";
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -12,7 +14,9 @@ const routes: Routes = [
   { path: 'users', component: TutorsComponent },
   { path: 'courses', component: CoursesComponent },
   { path: 'course', component: CourseComponent },
-  { path: 'user', component: TutorComponent }
+  { path: 'user', component: TutorComponent },
+  { path: 'sign-in', component: SignInComponent },
+  { path: 'sign-up', component: SignUpComponent }
 ];
 
 @NgModule({

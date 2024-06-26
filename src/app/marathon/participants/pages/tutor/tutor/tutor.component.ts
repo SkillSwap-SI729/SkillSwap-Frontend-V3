@@ -6,18 +6,7 @@ import {CourseSectionsService} from "../../../../centers/services/course-section
 import {DataService} from "../../../../../shared/services/data.service";
 import {SectionLessonsService} from "../../../../centers/services/section-lessons.service";
 import {Course} from "../../../../centers/model/course";
-import {TutorCoursesService} from "../../../../centers/services/tutor-courses.service";
-import {
-  MatCard, MatCardActions,
-  MatCardContent,
-  MatCardHeader, MatCardSmImage,
-  MatCardSubtitle,
-  MatCardTitle,
-  MatCardTitleGroup
-} from "@angular/material/card";
-import {MatButton} from "@angular/material/button";
-import {NgForOf} from "@angular/common";
-import {UserCommentsService} from "../../../services/user-comments.service";
+
 import {UserComment} from "../../../model/userComment";
 import {MatDivider} from "@angular/material/divider";
 import {MatIcon} from "@angular/material/icon";
@@ -35,12 +24,16 @@ import {toNumber} from "lodash";
   styleUrl: './tutor.component.css'
 })
 export class TutorComponent implements OnInit, AfterViewInit{
+
+  userLoggedId: any ;
+  userRoles: any;
   editProfileDialog = false;
   course: any;
   profileData: Profile;
   profileUpdateRequest: any;
   newCourseDialog = false;
   userData: any;
+  instructorData: any;
   instructorCourses: Array<Course> = [];
   tutorComments: Array<UserComment>=[];
 
@@ -56,16 +49,46 @@ export class TutorComponent implements OnInit, AfterViewInit{
   }
 
   getProfileData(){
-    this.instructorsService.getById(localStorage.getItem('instructorId')).subscribe(
-      instructor => {
-        this.profilesService.getById(instructor.profileId)
-          .subscribe((profileResponse: any) => {
-            this.profileData = profileResponse;
-            this.userService.getById(profileResponse.userId).subscribe((user: any) => {
-              this.userData = user;
+
+    if(localStorage.getItem("goingToProfileMode")== "otherProfile")
+    {
+      this.instructorsService.getById(localStorage.getItem('instructorId')).subscribe(
+        instructor => {
+          this.profilesService.getById(instructor.profileId)
+            .subscribe((profileResponse: any) => {
+              this.profileData = profileResponse;
+              this.userService.getById(profileResponse.userId).subscribe((user: any) => {
+                this.userData = user;
+              })
             })
-          })
-    })
+        })
+    }
+    else if(localStorage.getItem("goingToProfileMode")== "myProfile"){
+      this.profilesService.getByUserId(localStorage.getItem('userId2')).subscribe((profileResponse: any) => {
+        this.profileData = profileResponse;
+        this.instructorsService.getByProfileId(profileResponse.id).subscribe((instructor: any) => {
+          localStorage.setItem("instructorId", instructor.id);
+        })
+        }
+      )
+
+      this.userService.getById(localStorage.getItem('userId2')).subscribe((user: any) => {
+        this.userData = user;
+      })
+    }
+
+
+  }
+
+  profileType(): String
+  {
+    if(this.userData.roles.length == 2)
+    {
+      return "Instructor"
+    }
+    else {
+      return "Student"
+    }
 
   }
 
@@ -81,7 +104,7 @@ export class TutorComponent implements OnInit, AfterViewInit{
     this.profileUpdateRequest.aboutMe = this.profileData.aboutMe
 
     console.log("updateRequest",this.profileUpdateRequest);
-    this.profilesService.update(toNumber(localStorage.getItem('instructorId'))
+    this.profilesService.update(this.profileData.id
       , this.profileUpdateRequest).subscribe(
       (profile)=>{
         this.profileData = {...profile};
@@ -90,10 +113,24 @@ export class TutorComponent implements OnInit, AfterViewInit{
   }
 
   getInstructorData(){
-    this.instructorsService.getById(localStorage.getItem('instructorId'))
-      .subscribe((instructor: any) => {
-        this.instructorCourses = instructor.coursesResources;
+
+    if(localStorage.getItem("goingToProfileMode")== "otherProfile"){
+      this.instructorsService.getById(localStorage.getItem('instructorId'))
+        .subscribe((instructor: any) => {
+          this.instructorCourses = instructor.coursesResources;
+        })
+    }
+    else if(localStorage.getItem("goingToProfileMode")== "myProfile"){
+      this.userService.getById(localStorage.getItem('userId2')).subscribe((user: any) => {
+        this.profilesService.getByUserId(user.id).subscribe((profile: any) => {
+          this.instructorsService.getByProfileId(profile.id).subscribe((instructor: any) => {
+            localStorage.setItem("instructorId", instructor.id);
+            this.instructorCourses = instructor.coursesResources;
+          })
+        })
       })
+    }
+
   }
 
   goToCourse(courseId: number): void {
@@ -120,8 +157,16 @@ export class TutorComponent implements OnInit, AfterViewInit{
     })
   }
   ngOnInit(): void {
+    console.log(localStorage.getItem('goingToProfileMode'))
     this.getProfileData()
     this.getInstructorData()
+    this.getSessionData()
+    console.log("instructorId",localStorage.getItem('instructorId'))
+  }
+
+  getSessionData(){
+    this.userLoggedId = localStorage.getItem("userId2")
+    this.userRoles = localStorage.getItem("userRoles")
   }
 
   protected readonly localStorage = localStorage;

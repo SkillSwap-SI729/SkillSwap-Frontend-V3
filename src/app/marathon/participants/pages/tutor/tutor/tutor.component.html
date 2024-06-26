@@ -2,10 +2,10 @@
   <mat-card class="example-card">
     <mat-card-header>
       <mat-card-title-group>
-        <mat-card-title>{{ profileData.personName }}</mat-card-title>
+        <mat-card-title>{{ profileData.personName }} - {{ profileType() }} profile</mat-card-title>
         <mat-card-subtitle>{{ profileData.slogan }}</mat-card-subtitle>
         <img mat-card-sm-image src="{{profileData.photoUrl}}"
-             alt="Image of a Shiba Inu">
+             alt="Profile Image">
       </mat-card-title-group>
 
     </mat-card-header>
@@ -26,7 +26,8 @@
       <br>
       {{ profileData.aboutMe }}
     </mat-card-content>
-    <p-button label="Edit" icon="pi pi-pencil" (click)="this.editProfileDialog = true" />
+    <p-button *ngIf="userLoggedId && this.userData.id == userLoggedId"
+      label="Edit" icon="pi pi-pencil" (click)="this.editProfileDialog = true" />
   </mat-card>
 
   <p-dialog header="Add your information" [modal]="true" [(visible)]="editProfileDialog"
@@ -89,8 +90,9 @@
 <mat-divider></mat-divider>
 
 <!--INSTRUCTOR COURSES SECTION-->
-<div class="container">
+<div class="container" *ngIf="userData.roles.includes('ROLE_INSTRUCTOR')" >
   <h1>Courses of {{userData.username}}</h1>
+
   <div class="cards-container">
     <mat-card *ngFor="let course of instructorCourses" class="article-card" style="display: flex; justify-content: center">
       <mat-card-title>{{course.name}}</mat-card-title>
@@ -104,7 +106,8 @@
         <button mat-button (click)="goToCourse(course.id)">Know more</button>
       </mat-card-actions>
     </mat-card>
-    <p-button label="New Course" rounded="true" icon="pi pi-plus" size="large"
+    <p-button *ngIf="userLoggedId && userRoles.includes('ROLE_INSTRUCTOR')
+     && this.userData.id == userLoggedId" label="New Course" rounded="true" icon="pi pi-plus" size="large"
     (click)="this.newCourseDialog = true;"/>
 
     <!--NEW COURSE DIALOG-->
