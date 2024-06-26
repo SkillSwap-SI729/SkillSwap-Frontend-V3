@@ -1,0 +1,121 @@
+<div class="container">
+  <div class="form-container">
+
+    <div class="field mt-3">
+                <span class="p-float-label">
+                    <input id="firstName" type="text" pInputText [(ngModel)]="signUpRequest.firstName" />
+                    <label for="firstName">First Name</label>
+                    <small class="p-error" *ngIf=" submitted && (signUpRequest.firstName===''
+                    || signUpRequest.firstName===undefined)">
+                      First Name is required.
+                    </small>
+                </span>
+    </div>
+
+    <div class="field mt-3">
+                <span class="p-float-label">
+                    <input id="lastName" type="text" pInputText [(ngModel)]="signUpRequest.lastName" />
+                    <label for="lastName">Last Name</label>
+                    <small class="p-error" *ngIf=" submitted && (signUpRequest.lastName===''
+                    || signUpRequest.lastName===undefined)">
+                      Last Name is required.
+                    </small>
+                </span>
+    </div>
+
+    <div class="field mt-3">
+                <span class="p-float-label">
+                    <input id="email" type="text" pInputText [(ngModel)]="signUpRequest.email" />
+                    <label for="email">Email</label>
+                    <small class="p-error" *ngIf=" submitted && (signUpRequest.email===''
+                    || signUpRequest.email===undefined)">
+                      Email is required.
+                    </small>
+                </span>
+    </div>
+
+    <div class="field mt-3">
+                <span class="p-float-label">
+                    <input id="username" type="text" pInputText [(ngModel)]="signUpRequest.username" />
+                    <label for="username">Username</label>
+                    <small class="p-error" *ngIf=" submitted && (signUpRequest.username===''
+                    || signUpRequest.username===undefined)">
+                      Username is required.
+                    </small>
+                </span>
+    </div>
+    <div class="field mt-3">
+                <span class="p-float-label">
+                    <input id="password" type="text" pInputText [(ngModel)]="signUpRequest.password" />
+                    <label for="password">Password</label>
+                    <small class="p-error" *ngIf=" submitted && (signUpRequest.password===''
+                    || signUpRequest.password===undefined)">
+                      Password is required.
+                    </small>
+                </span>
+    </div>
+
+    <div class="flex flex-wrap gap-3">
+
+      <div class="flex align-items-center">
+        <p-radioButton
+          name="pizza"
+          value="student"
+          [(ngModel)]="userType"
+          [inputId]="student"
+          />
+        <label [for]="student" class="ml-2">
+          Student
+        </label>
+      </div>
+
+      <div class="flex align-items-center">
+        <p-radioButton
+          name="pizza"
+          value="instructor"
+          [(ngModel)]="userType"
+          [inputId]="instructor"
+          />
+        <label [for]="instructor" class="ml-2">
+          Instructor
+        </label>
+      </div>
+      <small class="p-error" *ngIf=" submitted && (userType===undefined)">
+        User Type is required.
+      </small>
+    </div>
+
+    <div *ngIf="successfulAccountCreation">
+      <h3>
+        Your account has been created successfully.
+      </h3>
+    </div>
+
+
+    <p-button label="Register" (click)="submitted= true; sendAuth()" />
+    <div class="flex ">
+      <div class="flex flex-column">
+        <p class="p">Already have an account?</p>
+
+        <div class="c">
+          <p-button label="Sign in" [text]="true" (click)="goToSignInPage()"/>
+        </div>
+
+
+
+      </div>
+    </div>
+    <p-dialog
+      header="Unsuccesful log in"
+      [modal]="true"
+      [(visible)]="incorrectAuth"
+      [style]="{ width: '50rem' }"
+      [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }"
+      [maximizable]="true">
+      <p>
+        Verify your credentials
+      </p>
+    </p-dialog>
+
+  </div>
+</div>

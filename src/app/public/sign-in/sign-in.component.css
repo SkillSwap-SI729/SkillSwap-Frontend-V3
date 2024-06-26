@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  justify-content: center;
+
+  height: 50vh;
+  padding-top: 3rem;
+}
+.form-container {
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 2rem;
+
+}
+.flex-column {
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.c{
+  justify-content: center;
+}

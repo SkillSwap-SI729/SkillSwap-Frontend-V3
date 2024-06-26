@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
   getAllTopics() {
     this.topicsService.getAll().subscribe((topics: any) => {
       this.links = topics
-      console.log(this.links)
+      //console.log(this.links)
       this.activeLink = this.links[0];
       this.getTopicCourses(this.activeLink.id)
     })
@@ -47,7 +47,7 @@ export class HomeComponent implements OnInit {
     });*/
     this.topicsService.getById(topicId).subscribe((topic: any) => {
       this.topicCourses = topic.coursesResources
-      console.log(this.topicCourses)
+      //console.log(this.topicCourses)
     })
   }
 
@@ -56,4 +56,14 @@ export class HomeComponent implements OnInit {
     this.router.navigateByUrl('/course').then()
   }
 
+  logOut(): void {
+    localStorage.removeItem("userId2");
+    localStorage.removeItem("token");
+    localStorage.removeItem("userRoles");
+  }
+  goToSignIn()
+  {
+    this.logOut()
+    this.router.navigateByUrl('/sign-in').then()
+  }
 }

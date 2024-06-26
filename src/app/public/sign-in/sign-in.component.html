@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="form-container">
+    <div class="field mt-3">
+                <span class="p-float-label">
+                    <input id="username" type="text" pInputText [(ngModel)]="signInRequest.username" />
+                    <label for="username">Username</label>
+                    <small class="p-error" *ngIf=" submitted && (signInRequest.username===''
+          || signInRequest.username===undefined)">
+                      Username is required.
+                    </small>
+                </span>
+    </div>
+    <div class="field mt-3">
+                <span class="p-float-label">
+                    <input id="password" type="text" pInputText [(ngModel)]="signInRequest.password" />
+                    <label for="password">Password</label>
+                    <small class="p-error" *ngIf=" submitted && (signInRequest.password===''
+          || signInRequest.password===undefined)">
+                      Password is required.
+                    </small>
+                </span>
+    </div>
+
+    <p-button label="Sign in" (click)="submitted= true; sendAuth()" />
+    <div class="flex ">
+      <div class="flex flex-column">
+        <p class="p">Don't have an account yet?</p>
+
+        <div class="c">
+          <p-button label="Sign up" [text]="true" (click)="goToSignUpPage()"/>
+        </div>
+
+
+
+      </div>
+    </div>
+    <p-dialog
+      header="Unsuccesful log in"
+      [modal]="true"
+      [(visible)]="incorrectAuth"
+      [style]="{ width: '50rem' }"
+      [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }"
+      [maximizable]="true">
+      <p>
+        Verify your credentials
+      </p>
+    </p-dialog>
+
+  </div>
+</div>
