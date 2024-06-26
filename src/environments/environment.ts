@@ -1,3 +1,3 @@
 export const environment = {
-  serverBasePath: 'http://localhost:8080/api/v2'
+  serverBasePath: 'https://powerful-integrity-production.up.railway.app/api/v2'
 };
